@@ -1,0 +1,8 @@
+.DS_Store
+.*.sw?
+*.un~
+files
+assets
+webrat.log
+*.orig
+spec/spec.opts

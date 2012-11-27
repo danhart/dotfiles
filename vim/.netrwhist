@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/DanH/Sites/noths/www/vendor/bundle/ruby/1.8/bundler/gems/noths-rails-extensions-664d4a77ef7e/lib/active_record'
+let g:netrw_dirhist_2='/Users/DanH/Sites/noths/www'
+let g:netrw_dirhist_3='/Users/DanH/Sites/noths/www/public/javascripts/refresh'
+let g:netrw_dirhist_4='/Users/DanH/Sites/noths/www'

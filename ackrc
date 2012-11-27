@@ -1,0 +1,5 @@
+--type-set=less=.less
+--type-set=css=.css
+--type-set=feature=.feature
+--type-set=puppet=.pp
+--ignore-dir=public/stylesheets

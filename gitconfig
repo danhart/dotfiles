@@ -1,0 +1,41 @@
+[core]
+  excludesfile = /Users/DanH/.gitignore
+
+[user]
+  name = Dan Hart
+  email = danhart@notonthehighstreet.com
+
+[alias]
+  l = log --pretty=format:'%Cgreen(%cr) %C(cyan)%an: %Creset %s %C(yellow)%d%Creset %Cred[%h]%Creset' --abbrev-commit --date=relative 
+  st = status
+  ci = commit
+  co = checkout
+  w = whatchanged
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[github]
+  user = danhart
+
+[push]
+  default = current
+
