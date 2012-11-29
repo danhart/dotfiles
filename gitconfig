@@ -1,5 +1,5 @@
 [core]
-  excludesfile = /Users/DanH/.gitignore
+  excludesfile = ~/.gitignore
 
 [user]
   name = Dan Hart
