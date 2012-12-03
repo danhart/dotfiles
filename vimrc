@@ -109,7 +109,7 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
 
 " rake less:compile
-nnoremap <leader>rlc :!vssh rake less:compile<cr><cr>
+nnoremap <leader>rlc :!vssh bundle exec rake less:compile<cr><cr>
 nnoremap <leader>bs :Bundle install<cr>
 
 " rename <ESC> to jj
