@@ -14,10 +14,17 @@ set softtabstop=2
 set expandtab
 
 " Tab settings for JavaScript
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+augroup filetype_javascript
+  au!
+  au FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+augroup END
 
 " Tab settings for less
-autocmd FileType less setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+augroup filetype_less
+  au!
+  au FileType less setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+  au FileType less setlocal commentstring=//\ %s
+augroup END
 
 " Make things better
 
