@@ -43,6 +43,6 @@
 [submodule "vim/bundle/vim-compile-less"]
 	path = vim/bundle/vim-compile-less
 	url = git@github.com:notonthehighstreet/vim-compile-less.git
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/vim-commentary"]
+	path = vim/bundle/vim-commentary
+	url = git://github.com/tpope/vim-commentary.git
