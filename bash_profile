@@ -13,6 +13,10 @@ alias gpo='git push origin HEAD'
 alias mvim='open -a MacVim'
 alias sbp='source ~/.bash_profile'
 
+function commit_for_patch() {
+  head -1 .git/rebase-apply/${1} | awk '{ print $2 }'
+}
+
 function delete_origin_branch() {
   git push origin :${1}
 }
