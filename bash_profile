@@ -17,6 +17,10 @@ function commit_for_patch() {
   head -1 .git/rebase-apply/${1} | awk '{ print $2 }'
 }
 
+function show_patch() {
+  git show $(commit_for_patch ${1})
+}
+
 function delete_origin_branch() {
   git push origin :${1}
 }
