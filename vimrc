@@ -119,8 +119,8 @@ nnoremap <leader>sv :so $MYVIMRC<cr>
 nnoremap <leader>rlc :!vssh bundle exec rake less:compile<cr><cr>
 nnoremap <leader>bs :Bundle install<cr>
 
-" rename <ESC> to jj
-" inoremap jj <ESC>
+" rename <ESC> to jk
+inoremap jk <esc>
 
 " Split windows
 " new vertical split
