@@ -11,6 +11,7 @@ ensure_link "${PWD}/vim" "$HOME/.vim"
 ensure_link "${PWD}/ackrc" "$HOME/.ackrc"
 ensure_link "${PWD}/gitconfig" "$HOME/.gitconfig"
 ensure_link "${PWD}/gitignore" "$HOME/.gitignore"
+ensure_link "${PWD}/keyremap4macbook/private.xml" "$HOME/Library/Application Support/KeyRemap4MacBook/private.xml"
 
 ensure_link "${PWD}/bin" "$HOME/bin"
 
