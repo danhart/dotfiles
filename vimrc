@@ -73,9 +73,15 @@ set nowrap
 " set colorcolumn=85
 
 " Invisible Chars
-
 set list
-" set listchars=tab:▸\ ,eol:¬
+
+" Nabbed from Tim Pope's vim-sensible plugin
+set listchars=tab:>\ ,eol:¬,extends:>,precedes:<,nbsp:+
+
+if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
+  let &listchars = "tab:\u21e5 ,eol:¬,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
+  let &fillchars = "vert:\u259a,fold:\u00b7"
+endif
 
 " New to vim!
 
