@@ -26,6 +26,14 @@ augroup filetype_less
   au FileType less setlocal commentstring=//\ %s
 augroup END
 
+" It's annoying to see the trail listchar while typing
+" So only set list while in normal mode
+augroup no_list_in_insert_mode
+  au!
+  au InsertEnter * set nolist
+  au InsertLeave * set list
+augroup END
+
 " Make things better
 
 set encoding=utf-8
@@ -76,10 +84,10 @@ set nowrap
 set list
 
 " Nabbed from Tim Pope's vim-sensible plugin
-set listchars=tab:>\ ,eol:¬,extends:>,precedes:<,nbsp:+
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
 if &termencoding ==# 'utf-8' || &encoding ==# 'utf-8'
-  let &listchars = "tab:\u21e5 ,eol:¬,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
+  let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
   let &fillchars = "vert:\u259a,fold:\u00b7"
 endif
 
