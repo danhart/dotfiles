@@ -1,4 +1,6 @@
 #!/bin/bash
+# Remember to do git init and git submodule update after clone!
+# Could put them in here maybe?
 
 function ensure_link {
   test -L "$2" || ln -s "$1" "$2"
