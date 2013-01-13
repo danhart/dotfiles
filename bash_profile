@@ -1,6 +1,7 @@
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export NODE_PATH="/usr/local/lib/node_modules"
+export PS1="\u@\h \w $ "
 
 alias l='ls -lA'
 alias ll='ls -lA'
