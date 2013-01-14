@@ -131,6 +131,7 @@ nnoremap <leader>sv :so $MYVIMRC<cr>
 
 " rake less:compile
 nnoremap <leader>rlc :!vssh bundle exec rake less:compile<cr><cr>
+nnoremap <leader>ttr :!ttr<cr><cr>
 nnoremap <leader>bs :Bundle install<cr>
 
 " Split windows
