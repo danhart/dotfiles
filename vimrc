@@ -130,7 +130,7 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
 
 " rake less:compile
-nnoremap <leader>rlc :!vssh bundle exec rake less:compile<cr><cr>
+nnoremap <leader>rlc :!rlc<cr><cr>
 nnoremap <leader>ttr :!ttr<cr><cr>
 nnoremap <leader>bs :Bundle install<cr>
 
@@ -167,8 +167,8 @@ set noswapfile                    " It's 2012, Vim.
 nnoremap <silent> <F3> :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
 
-" set shellcmdflag=-ic
-set shell=bash\ --login
+" Set interactive command prompt
+set shellcmdflag=-ic
 
 " When switching the buffer using :sb use the tab if it's open
 set switchbuf=usetab
