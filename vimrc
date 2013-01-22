@@ -168,7 +168,7 @@ nnoremap <silent> <F3> :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
 
 " Set interactive command prompt
-set shellcmdflag=-ic
+set shellcmdflag=-lic
 
 " When switching the buffer using :sb use the tab if it's open
 set switchbuf=usetab
