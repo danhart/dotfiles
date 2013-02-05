@@ -175,3 +175,5 @@ set switchbuf=usetab
 
 let g:ctrlp_extensions = ['tag']
 
+set wildignore+=*.css
+
