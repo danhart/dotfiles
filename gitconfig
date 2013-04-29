@@ -6,13 +6,16 @@
   email = danhart@notonthehighstreet.com
 
 [alias]
-  l = log --pretty=format:'%Cgreen(%cr) %C(cyan)%an: %Creset %s %C(yellow)%d%Creset %Cred[%h]%Creset' --abbrev-commit --date=relative 
+  l = log --pretty=format:'%Cred[%h]%Creset %Cgreen(%cr) %C(cyan)%an: %Creset %s %C(yellow)%d%Creset' --abbrev-commit --date=relative
   st = status
   ci = commit
   co = checkout
   w = whatchanged
   smu = !git submodule foreach git checkout master && git submodule foreach git pull
   pick = cherry-pick
+  ignore = !git update-index --assume-unchanged
+  unignore = !git update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep ^[a-z]
 
 [color]
   branch = auto
