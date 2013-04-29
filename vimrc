@@ -146,7 +146,7 @@ nnoremap <C-l> <C-w>l
 colorscheme molokai
 
 if has('gui_running')
-    set guifont=Menlo:h12
+    set guifont=Menlo:h14
 
     " Remove all the UI cruft
     set go-=T
