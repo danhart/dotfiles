@@ -76,9 +76,9 @@ vmap <D-S-Down> :m'>+<CR>gv
 " Handle long lines
 
 set nowrap
-" set textwidth=79
+set textwidth=80
+set colorcolumn=+1
 " set formatoptions=qrn1
-" set colorcolumn=85
 
 " Invisible Chars
 set list
@@ -131,7 +131,7 @@ nnoremap <leader>sv :so $MYVIMRC<cr>
 
 " rake less:compile
 nnoremap <leader>rlc :!rlc<cr><cr>
-nnoremap <leader>ttr :!ttr<cr><cr>
+nnoremap <leader>t :!ttr<cr><cr>
 nnoremap <leader>bs :Bundle install<cr>
 
 " Split windows
@@ -142,6 +142,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Resize splits when the window is resized
+au VimResized * :wincmd =
 
 colorscheme molokai
 
@@ -176,4 +179,7 @@ set switchbuf=usetab
 let g:ctrlp_extensions = ['tag']
 
 set wildignore+=*.css
+
+" Don't try to highlight lines longer than 800 characters.
+set synmaxcol=800
 
