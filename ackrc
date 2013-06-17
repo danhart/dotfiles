@@ -1,5 +1,1 @@
---type-set=less=.less
---type-set=css=.css
---type-set=feature=.feature
---type-set=puppet=.pp
---ignore-dir=public/stylesheets
+# Nothing needed, everything that used to be in here is now project-specific.
