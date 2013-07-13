@@ -184,3 +184,5 @@ set wildignore+=*.css
 " Don't try to highlight lines longer than 800 characters.
 set synmaxcol=800
 
+highlight SpellBad term=underline gui=undercurl guisp=Orange
+set spelllang=en_gb
