@@ -37,6 +37,10 @@ function delete_branch() {
   git gc
 }
 
+function matching_filenames() {
+  find ${1} -type f -exec basename {} \; | xargs -L1 -J % ack % ${2}
+}
+
 export PATH="/usr/local/bin:$PATH"
 
 export EDITOR="vim"
