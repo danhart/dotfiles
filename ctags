@@ -14,4 +14,5 @@
 --exclude=user-data
 --exclude=venv
 --exclude=static-cache
+--exclude=node_modules
 
