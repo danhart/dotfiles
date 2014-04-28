@@ -19,3 +19,5 @@ ensure_link "${PWD}/weechat" "$HOME/.weechat"
 
 ensure_link "${PWD}/bin" "$HOME/bin"
 
+git submodule init
+git submodule update
