@@ -6,7 +6,7 @@
 #    * the branch/status of the current git repository
 #    * the branch of the current subversion repository
 #    * the return value of the previous command
-# 
+#
 # USAGE:
 #
 #   1. Save this file as ~/.git_svn_bash_prompt
@@ -14,7 +14,7 @@
 #        . ~/.git_svn_bash_prompt
 #
 # AUTHOR:
-# 
+#
 #   Scott Woods <scott@westarete.com>
 #   West Arete Computing
 #
@@ -57,9 +57,9 @@ function set_git_branch {
   else
     state="${RED}"
   fi
-  
+
   # Set arrow icon based on status against remote.
-  remote_pattern="# Your branch is (.*) of"
+  remote_pattern="Your branch is (.*) of"
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
     if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
       remote="↑"
@@ -69,13 +69,13 @@ function set_git_branch {
   else
     remote=""
   fi
-  diverge_pattern="# Your branch and (.*) have diverged"
+  diverge_pattern="Your branch and (.*) have diverged"
   if [[ ${git_status} =~ ${diverge_pattern} ]]; then
     remote="↕"
   fi
-  
+
   # Get the name of the branch.
-  branch_pattern="^# On branch ([^${IFS}]*)"    
+  branch_pattern="^On branch ([^${IFS}]*)"
   if [[ ${git_status} =~ ${branch_pattern} ]]; then
     branch=${BASH_REMATCH[1]}
   fi
@@ -115,7 +115,7 @@ function set_prompt_symbol () {
 
 # Set the full bash prompt.
 function set_bash_prompt () {
-  # Set the PROMPT_SYMBOL variable. We do this first so we don't lose the 
+  # Set the PROMPT_SYMBOL variable. We do this first so we don't lose the
   # return value of the last command.
   set_prompt_symbol $?
 
@@ -127,7 +127,7 @@ function set_bash_prompt () {
   else
     BRANCH=''
   fi
-  
+
   # Set the bash prompt variable.
   PS1="\u@\h \w ${BRANCH}${PROMPT_SYMBOL} "
 }
