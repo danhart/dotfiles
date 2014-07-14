@@ -16,6 +16,7 @@ ensure_link "${PWD}/gitconfig" "$HOME/.gitconfig"
 ensure_link "${PWD}/gitignore" "$HOME/.gitignore"
 ensure_link "${PWD}/KeyRemap4MacBook" "$HOME/Library/Application Support/KeyRemap4MacBook"
 ensure_link "${PWD}/weechat" "$HOME/.weechat"
+ensure_link "${PWD}/tmux.conf" "$HOME/.tmux.conf"
 
 ensure_link "${PWD}/bin" "$HOME/bin"
 
