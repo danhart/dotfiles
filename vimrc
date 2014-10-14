@@ -68,8 +68,6 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 
 " Move selection up/down (add =gv to reindent after move)
 vmap <D-S-Up> :m-2<CR>gv
