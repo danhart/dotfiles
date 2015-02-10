@@ -49,3 +49,5 @@ source ~/bin/git-completion.sh
 source ~/bin/git_svn_bash_prompt.sh
 
 if [[ -s ~/.bash_local ]] ; then source ~/.bash_local ; fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

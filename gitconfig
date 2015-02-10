@@ -3,7 +3,7 @@
 
 [user]
   name = Dan Hart
-  email = danhart@notonthehighstreet.com
+  email = dan@danhart.co.uk
 
 [alias]
   l = log --pretty=format:'%Cred[%h]%Creset %Cgreen(%cr) %C(cyan)%an: %Creset %s %C(yellow)%d%Creset' --abbrev-commit --date=relative
