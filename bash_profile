@@ -13,6 +13,7 @@ alias gpf='git push -f origin HEAD'
 alias gpo='git push origin HEAD'
 alias mvim='open -a MacVim'
 alias sbp='source ~/.bash_profile'
+alias f="fab -f ~/workspace/puppet/fabfile.py"
 
 function commit_for_patch() {
   head -1 .git/rebase-apply/${1} | awk '{ print $2 }'
