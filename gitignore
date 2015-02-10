@@ -6,3 +6,4 @@ assets
 webrat.log
 *.orig
 spec/spec.opts
+tags
