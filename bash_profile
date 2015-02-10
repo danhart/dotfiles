@@ -1,54 +1,33 @@
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-export NODE_PATH="/usr/local/lib/node_modules"
-export PS1="\u@\h \w $ "
+#!/usr/bin/env bash
 
-alias l='ls -lA'
-alias ll='ls -lA'
-alias chromemobile='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome -user-agent="iPhone"'
-alias gst='git status'
-alias gl='git l'
-alias fdns='dscacheutil -flushcache'
-alias gpf='git push -f origin HEAD'
-alias gpo='git push origin HEAD'
-alias mvim='open -a MacVim'
-alias sbp='source ~/.bash_profile'
 alias f="fab -f ~/workspace/puppet/fabfile.py"
+alias mvim='open -a MacVim'
 
-function commit_for_patch() {
-  head -1 .git/rebase-apply/${1} | awk '{ print $2 }'
-}
+export PATH=$PATH:~/bin
 
-function show_patch() {
-  git show $(commit_for_patch ${1})
-}
+# Load RVM, if you are using it
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-function delete_origin_branch() {
-  git push origin :${1}
-}
+# Path to the bash it configuration
+export BASH_IT=$HOME/.bash_it
 
-function delete_local_branch() {
-  git branch -D ${1}
-}
+# Lock and Load a custom theme file
+# location /.bash_it/themes/
+export BASH_IT_THEME='bobby'
 
-function delete_branch() {
-  delete_origin_branch ${1}
-  delete_local_branch ${1}
-  git remote prune origin
-  git gc
-}
-
-function matching_filenames() {
-  find ${1} -type f -exec basename {} \; | xargs -L1 -J % ack % ${2}
-}
-
-export PATH="/usr/local/bin:/usr/local/mysql/bin:$PATH"
-
+# Set my editor and git editor
 export EDITOR="vim"
 
-source ~/bin/git-completion.sh
-source ~/bin/git_svn_bash_prompt.sh
+# Change this to your console based IRC client of choice.
 
-if [[ -s ~/.bash_local ]] ; then source ~/.bash_local ; fi
+export IRC_CLIENT='irssi'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Set this to false to turn off version control status checking within the prompt for all themes
+export SCM_CHECK=true
+
+# Set vcprompt executable path for scm advance info in prompt (demula theme)
+# https://github.com/xvzf/vcprompt
+#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
+
+# Load Bash It
+source $BASH_IT/bash_it.sh
