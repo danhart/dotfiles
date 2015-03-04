@@ -79,3 +79,6 @@
 [submodule "vim/bundle/flatlandia"]
 	path = vim/bundle/flatlandia
 	url = git@github.com:jordwalke/flatlandia.git
+[submodule "vim/bundle/vim-airline"]
+	path = vim/bundle/vim-airline
+	url = git@github.com:bling/vim-airline.git
