@@ -67,7 +67,6 @@ set gdefault
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr>
 
 " Move selection up/down (add =gv to reindent after move)
 vmap <D-S-Up> :m-2<CR>gv
@@ -138,6 +137,10 @@ nnoremap <leader>bs :Bundle install<cr>
 " new vertical split
 nnoremap <leader>w <C-w>v<C-w>l
 
+nnoremap <Leader>t :NERDTreeToggle<Enter>
+
+nnoremap <leader><space> :noh<cr>
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -146,18 +149,33 @@ nnoremap <C-l> <C-w>l
 " Resize splits when the window is resized
 au VimResized * :wincmd =
 
-colorscheme molokai
+colorscheme flatlandia
+" colorscheme molokai
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 
 if has('gui_running')
-    set guifont=Menlo:h14
+  " set guifont=Menlo:h14
+  set guifont=Inconsolata\ for\ Powerline:h18
 
-    " Remove all the UI cruft
-    set go-=T
-    set go-=l
+  " Remove all the UI cruft
+  set go-=T
+  set go-=l
+
+  let g:airline_powerline_fonts = 1
+  let g:airline_left_sep = ''
+  let g:airline_left_alt_sep = ''
+  let g:airline_right_sep = ''
+  let g:airline_right_alt_sep = ''
+  let g:airline_symbols.branch = ''
+  let g:airline_symbols.readonly = ''
+  let g:airline_symbols.linenr = ''
 endif
 
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['ruby', 'eruby', 'php', 'css', 'less', 'cucumber', 'javascript'],
+                           \ 'active_filetypes': ['clojure', 'ruby', 'eruby', 'php', 'css', 'less', 'cucumber', 'javascript'],
                            \ 'passive_filetypes': ['puppet'] }
 
 set undodir=~/.vim/tmp/undo//     " undo files
@@ -177,6 +195,9 @@ set shellcmdflag=-lic
 set switchbuf=usetab
 
 let g:ctrlp_extensions = ['tag']
+
+" Fix error when opening vim with latest nerdtree
+let NERDTreeHijackNetrw = 0
 
 set wildignore+=*.css
 
