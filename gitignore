@@ -2,8 +2,8 @@
 .*.sw?
 *.un~
 files
-assets
 webrat.log
 *.orig
 spec/spec.opts
 tags
+vim/plugged
