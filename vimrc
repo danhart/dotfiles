@@ -29,6 +29,7 @@ Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
 Plug 'bling/vim-airline'
 Plug 'rking/ag.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Must Haves

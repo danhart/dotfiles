@@ -7,3 +7,4 @@ webrat.log
 spec/spec.opts
 tags
 vim/plugged
+.fab_tasks~
