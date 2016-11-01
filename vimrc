@@ -30,6 +30,9 @@ Plug 'guns/vim-clojure-static'
 Plug 'bling/vim-airline'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'mtscout6/syntastic-local-eslint.vim', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 " Must Haves
@@ -91,7 +94,6 @@ vmap <D-S-Down> :m'>+<CR>gv
 " Handle long lines
 
 set nowrap
-set textwidth=80
 set colorcolumn=+1
 " set formatoptions=qrn1
 
@@ -171,6 +173,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['clojure', 'ruby', 'eruby', 'php', 'css', 'less', 'cucumber', 'javascript'],
                            \ 'passive_filetypes': ['puppet'] }
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 set undodir=~/.vim/tmp/undo//     " undo files
 set backupdir=~/.vim/tmp/backup// " backups
 set directory=~/.vim/tmp/swap//   " swap files
@@ -190,3 +194,8 @@ set synmaxcol=800
 
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 set spelllang=en_gb
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
