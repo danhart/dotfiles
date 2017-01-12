@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 Plug 'danhart/flatlandia'
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-dispatch'
@@ -37,6 +36,12 @@ call plug#end()
 
 " Must Haves
 filetype plugin indent on
+syntax enable
+
+set backspace=indent,eol,start
+set complete-=i
+set smarttab
+set ruler
 
 " Tab settings
 
@@ -68,6 +73,7 @@ augroup END
 " Make things better
 
 set scrolloff=3
+set sidescrolloff=5
 set wildmode=list:longest
 set visualbell
 set cursorline
@@ -76,7 +82,13 @@ set ttyfast
 set number
 set undofile
 
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j " Delete comment character when joining commented lines
+endif
+
 let mapleader = ","
+
+set timeoutlen=1000 ttimeoutlen=0
 
 " Sane Searching/Moving
 
