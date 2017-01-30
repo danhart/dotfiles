@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-alias f="fab -f ~/workspace/puppet/fabfile.py"
-alias mvim='open -a MacVim'
-
 export PATH=$PATH:~/bin
 
 # Load RVM, if you are using it
