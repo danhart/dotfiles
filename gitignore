@@ -1,7 +1,6 @@
 .DS_Store
 .*.sw?
 *.un~
-files
 webrat.log
 *.orig
 spec/spec.opts

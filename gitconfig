@@ -16,6 +16,7 @@
   ignore = !git update-index --assume-unchanged
   unignore = !git update-index --no-assume-unchanged
   ignored = !git ls-files -v | grep ^[a-z]
+  recent = !git branch --sort=-committerdate
 
 [color]
   branch = auto

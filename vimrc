@@ -32,6 +32,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'mtscout6/syntastic-local-eslint.vim', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx'
+Plug 'digitaltoad/vim-pug'
+Plug 'ianks/vim-tsx'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " Must Haves
@@ -98,6 +101,7 @@ set ignorecase
 set smartcase
 set gdefault
 set showmatch
+set icm=nosplit
 
 " Move selection up/down (add =gv to reindent after move)
 vmap <D-S-Up> :m-2<CR>gv
@@ -172,6 +176,25 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
+let g:rbpt_colorpairs = [
+    \ ['brown',       'SeaGreen3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'SeaGreen3'],
+    \ ['darkgreen',   'SeaGreen3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'SeaGreen3'],
+    \ ['brown',       'SeaGreen3'],
+    \ ['gray',        'SeaGreen3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'SeaGreen3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgreen',   'SeaGreen3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['red',         'SeaGreen3'],
+    \ ]
+
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
@@ -182,10 +205,11 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['clojure', 'ruby', 'eruby', 'php', 'css', 'less', 'cucumber', 'javascript'],
+                           \ 'active_filetypes': ['clojure', 'ruby', 'eruby', 'php', 'css', 'less', 'cucumber', 'javascript', 'typescript', 'typescript.jsx'],
                            \ 'passive_filetypes': ['puppet'] }
 
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['tslint']
 
 set undodir=~/.vim/tmp/undo//     " undo files
 set backupdir=~/.vim/tmp/backup// " backups
@@ -223,3 +247,4 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
