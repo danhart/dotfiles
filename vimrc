@@ -164,6 +164,9 @@ nnoremap <Leader>t :NERDTreeToggle<Enter>
 
 nnoremap <leader><space> :noh<cr>
 
+" Format with JQ
+nnoremap <leader>j :%!jq<cr>:set ft=json<cr>
+
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
