@@ -19,7 +19,7 @@ Plug 'groenewege/vim-less'
 Plug 'kien/ctrlp.vim'
 Plug 'othree/html5.vim'
 Plug 'ervandew/supertab'
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
@@ -35,6 +35,8 @@ Plug 'mxw/vim-jsx'
 Plug 'digitaltoad/vim-pug'
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
+Plug 'hashivim/vim-terraform'
+Plug 'juliosueiras/vim-terraform-completion'
 call plug#end()
 
 " Must Haves
